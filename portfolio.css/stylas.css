@@ -57,75 +57,36 @@ body {
 .header-contacts-link:focus {
   color: var(--accent-color);
 }
-/*==============End Header=======================================*/
-/*==============Hero=============================================*/
-.hero-heading {
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36x;
-  text-align: center;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: #ffffff;
-}
-.modal-button {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.06em;
-  color: #ffffff;
-  background: var(--accent-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-}
-.modal-button:hover,
-.modal-button:focus {
-  background-color: #188ce8;
-}
-.hero {
-  background-color: #2f303a;
-}
-/*==============Content===========================================*/
-/*==============My anvantages=====================================*/
-.anvantages-heading {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: #212121;
-}
-.content {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: #757575;
-}
-/*==============End my anvantages=================================*/
-/*==============My work===========================================*/
-/*==============End my work=======================================*/
-/*==============My command========================================*/
-.third-heading {
+/*==============End Header========================================*/
+/*==============Menu==============================================*/
+.link-menu {
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.19;
+  line-height: 1.63;
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
 }
-.content-command {
-  font-weight: normal;
+.link-menu:hover,
+.link-menu:focus {
+  color: #ffffff;
+  background-color: var(--accent-color);
+}
+/*==============End Menu==========================================*/
+/*==============Content===========================================*/
+.third-heading {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: #212121;
+}
+.content-portfolio {
   font-size: 16px;
-  line-height: 1.19;
-  text-align: center;
+  line-height: 1.87;
   letter-spacing: 0.03em;
   color: #757575;
 }
-/*==============End my command====================================*/
 /*==============End Content=======================================*/
 /*==============Footer============================================*/
 .footer {
