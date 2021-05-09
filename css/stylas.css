@@ -1,5 +1,7 @@
 :root {
   --accent-color: #2196f3;
+  --title-color: #212121;
+  --color-content: #757575;
   --first-foyn: "Roboto", sans-serif;
   --second-foyn: "Raleway", sans-serif;
 }
@@ -12,7 +14,7 @@
 body {
   font-family: var(--first-foyn);
   letter-spacing: 0.03em;
-  color: #757575;
+  color: var(--color-content);
 }
 /*==============Components=======================================*/
 .second-heading {
@@ -21,7 +23,14 @@ body {
   line-height: 1.16;
   text-align: center;
   letter-spacing: 0.03em;
-  color: #212121;
+  color: var(--title-color);
+}
+.content {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--color-content);
 }
 /*==============End Components===================================*/
 /*==================Header=======================================*/
@@ -40,7 +49,7 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  color: #212121;
+  color: var(--title-color);
 }
 .navigation-link:hover,
 .navigation-link:focus {
@@ -51,24 +60,28 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  color: #757575;
+  color: var(--color-content);
 }
 .header-contacts-link:hover,
 .header-contacts-link:focus {
   color: var(--accent-color);
 }
+.activ {
+  color: var(--accent-color);
+}
 /*==============End Header=======================================*/
 /*==============Hero=============================================*/
-.hero-heading {
+.hero-item {
   font-weight: 900;
   font-size: 44px;
-  line-height: 1.36x;
+  line-height: 1.35;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
 }
 .modal-button {
+  font-family: var(--first-foyn);
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
@@ -83,7 +96,7 @@ body {
 }
 .modal-button:hover,
 .modal-button:focus {
-  background-color: #188ce8;
+  background-color: var(--accent-color);
 }
 .hero {
   background-color: #2f303a;
@@ -96,14 +109,20 @@ body {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #212121;
+  color: var(--title-color);
 }
-.content {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: #757575;
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0px;
+  padding: 0px;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 /*==============End my anvantages=================================*/
 /*==============My work===========================================*/
@@ -115,15 +134,14 @@ body {
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
-  color: #212121;
+  color: var(--title-color);
 }
 .content-command {
-  font-weight: normal;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
-  color: #757575;
+  color: var(--color-content);
 }
 /*==============End my command====================================*/
 /*==============End Content=======================================*/
@@ -133,6 +151,7 @@ body {
 }
 .logotype-footer {
   font-family: var(--second-foyn);
+  font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
@@ -142,10 +161,69 @@ body {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
-}
-.address-link:hover,
-.address-link:focus {
   color: #ffffff;
 }
+.contact-link-footer {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+/*==============End Footer========================================*/
+/*-----------------Портфолио----------------------------*/
+/*==============Components=======================================*/
+.second-heading {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-color);
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0px;
+  padding: 0px;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/*==============End Components===================================*/
+/*==================Header=======================================*/
+
+/*==============End Header========================================*/
+/*==============Menu==============================================*/
+.third-h {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2px;
+  letter-spacing: 0.06em;
+  color: var(--title-color);
+}
+.bt-menu {
+  font-family: var(--first-foyn);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  text-align: center;
+  letter-spacing: 0.03em;
+  background-color: #f5f4fa;
+  color: var(--title-color);
+}
+.bt-menu:hover,
+.bt-menu:focus {
+  color: #ffffff;
+  background-color: var(--accent-color);
+}
+
+/*==============End Menu==========================================*/
+/*==============Content===========================================*/
+
+/*==============End Content=======================================*/
+/*==============Footer============================================*/
 /*==============End Footer========================================*/
