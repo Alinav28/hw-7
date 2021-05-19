@@ -2,6 +2,12 @@
   --accent-color: #2196f3;
   --title-color: #212121;
   --color-content: #757575;
+  --background-body: #e5e5e5;
+  --bt-menu-background: #f5f4fa;
+  --light-color-content: #ffffff;
+  --color-logo-heder: #000000;
+  --background-color-hero: #2f303a;
+  --modal-button-background: #188ce8;
   --first-foyn: "Roboto", sans-serif;
   --second-foyn: "Raleway", sans-serif;
 }
@@ -37,7 +43,7 @@ body {
   font-family: var(--first-foyn);
   letter-spacing: 0.03em;
   color: var(--color-content);
-  background-color: #e5e5e5;
+  background-color: var(--background-body);
 }
 /*==============Components=======================================*/
 .second-heading {
@@ -67,14 +73,15 @@ body {
 /*==================Header=======================================*/
 
 .header {
-  background-color: #ffffff;
+  background-color: var(--light-color-content);
   border: 1px solid #ececec;
+  padding-top: 24px;
+  padding-bottom: 25px;
 }
+
 .header-contacts {
   display: flex;
   align-items: center;
-  padding-top: 24px;
-  padding-bottom: 25px;
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
@@ -89,7 +96,7 @@ body {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
-  color: #000000;
+  color: var(--color-logo-heder);
   margin-right: 93px;
 }
 .logotype-firsst-part {
@@ -99,7 +106,7 @@ body {
   display: flex;
   align-items: center;
 }
-.navigation-link:not(last-child) {
+.navigation-item:not(:last-child) {
   margin-right: 50px;
 }
 .navigation-link {
@@ -113,13 +120,13 @@ body {
 .navigation-link:focus {
   color: var(--accent-color);
 }
+.header-contacts-item:not(:last-child) {
+  margin-right: 50px;
+}
 .header-contacts-list {
   display: flex;
   align-items: center;
   margin-left: auto;
-}
-.mailto {
-  margin-right: 50px;
 }
 .header-contacts-link {
   font-weight: 500;
@@ -138,11 +145,9 @@ body {
 /*==============End Header=======================================*/
 /*==============Hero=============================================*/
 .hero {
-  background-color: #2f303a;
-}
-.hero-content {
+  background-color: var(--background-color-hero);
   padding-top: 200px;
-  padding-bottom: 280px;
+  padding-bottom: 200px;
 }
 .hero-item {
   margin-left: 226px;
@@ -156,39 +161,32 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--light-color-content);
 }
-.button-hero {
+.modal-button {
   margin-top: 30px;
-  display: flex;
+
   justify-content: center;
 }
 .modal-button {
-  position: absolute;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  display: flex;
   font-family: var(--first-foyn);
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
-  text-align: center;
   letter-spacing: 0.06em;
-  color: #ffffff;
-  background: #188ce8;
+  color: var(--light-color-content);
+  background: var(--modal-button-background);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  position: absolute;
   border-radius: 4px;
   margin-left: auto;
   margin-right: auto;
   border-style: none;
   padding: 10px 32px;
+  display: block;
 }
 .modal-button:hover,
 .modal-button:focus {
   background-color: var(--accent-color);
-}
-.hero {
-  background-color: #2f303a;
 }
 /*==============Content===========================================*/
 /*==============My anvantages=====================================*/
@@ -220,27 +218,37 @@ body {
   display: flex;
   align-items: center;
 }
-.item-anvantages:not(last-child) {
+.item-anvantages:not(:last-child) {
   margin-right: 30px;
 }
 /*==============End my anvantages=================================*/
 /*==============My work===========================================*/
+.hi-work {
+  margin-bottom: 50px;
+}
 .work-list-container {
   padding-top: 47px;
   padding-bottom: 94px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .work-list {
   display: flex;
-  align-items: center;
+  margin-left: -30px;
+  margin-top: -30px;
 }
-.item-work:not(last-child) {
+}
+.item-work{
+  margin-left: 30px;
+  margin-top: 30px;
+}
+.item-work:not(:last-child) {
   margin-right: 30px;
-  margin-top: 50px;
 }
 /*==============End my work=======================================*/
 /*==============My command========================================*/
 .my-command {
-  background-color: #f5f4fa;
+  background-color: var(--bt-menu-background);
 }
 .third-heading {
   font-weight: 500;
@@ -262,20 +270,24 @@ body {
 }
 .command-list {
   display: flex;
-  align-items: center;
   padding-top: 50px;
+  margin-top: -50px;
+  margin-left: -30px;
 }
-.item-command:not(last-child) {
+.item-command{
+  margin-top: 50px;
+  margin-bottom: 30px;
+ box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+ border-radius: 0px 0px 4px 4px;}
+ 
+.item-command:not(:last-child) {
   margin-right: 30px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
 }
 /*==============End my command====================================*/
 /*==============End Content=======================================*/
 /*==============Footer============================================*/
 .footer {
-  background-color: #2f303a;
+  background-color: var(--background-color-hero);
 }
 .div-footer {
   padding-top: 60px;
@@ -287,17 +299,22 @@ body {
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  color: #ffffff;
+  color: var(--light-color-content);
 }
 .footer-address {
-  padding-top: 20px;
+  margin-top: 20px;
+  font-style: normal;
+ 
 }
+.address-item {
+  padding-bottom: 9px;
+} 
 .address-link {
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: #ffffff;
+  color: var(--light-color-content);
 }
 .contact-link-footer {
   font-size: 14px;
@@ -333,7 +350,7 @@ body {
 /*==============End Header========================================*/
 /*==============Menu==============================================*/
 .portfolio {
-  background-color: #ffffff;
+  background-color: var(--light-color-content);
 }
 .bt-container {
   display: flex;
@@ -344,9 +361,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 .item-menu:not(:last-child) {
   margin-right: 8px;
+}
+.item-menu {
+  background-color: var(--bt-menu-background);
+
 }
 .bt-menu {
   font-family: var(--first-foyn);
@@ -355,32 +377,33 @@ body {
   line-height: 1.63;
   text-align: center;
   letter-spacing: 0.03em;
-  background-color: #f5f4fa;
   color: var(--title-color);
   padding: 6px 22px;
 }
 .bt-menu:hover,
 .bt-menu:focus {
-  color: #ffffff;
+  color: var(--light-color-content);
   background-color: var(--accent-color);
 }
 /*==============End Menu==========================================*/
 /*==============Content===========================================*/
 .content-container {
-  padding-top: 34px;
+  padding-top: 34px; 
 }
-.list-content {
+.list-content { 
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-left: auto;
+  flex-wrap: wrap; 
+  margin-left: -30px;
+  margin-top: -30px;  
   margin-right: auto;
-}
-.item-content {
-  margin-bottom: 30px;
-  border: 1px solid #eeeeee;
+}    
+
+.item-content { 
+  border: 1px solid #EEEEEE;
   box-sizing: border-box;
+}
+.item-content:not(:nth-child(3n)) {
+  margin-right: 30px;
 }
 .third-h {
   font-weight: 700;
