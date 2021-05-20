@@ -252,7 +252,7 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-color);
-  margin-bottom: 10px;
+  padding-bottom: 10px;
 }
 .content-command {
   font-size: 16px;
