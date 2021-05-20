@@ -2,7 +2,6 @@
   --accent-color: #2196f3;
   --title-color: #212121;
   --color-content: #757575;
-  --background-body: #e5e5e5;
   --bt-menu-background: #f5f4fa;
   --light-color-content: #ffffff;
   --color-logo-heder: #000000;
@@ -40,7 +39,7 @@ body {
   font-family: var(--first-foyn);
   letter-spacing: 0.03em;
   color: var(--color-content);
-  background-color: var(--background-body);
+  background-color: var(--light-color-content);
 }
 /*==============Components=======================================*/
 .second-heading {
@@ -62,8 +61,6 @@ body {
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
-  padding-top: 94px;
-  padding-bottom: 94px;
   margin: 0 auto;
 }
 /*==============End Components===================================*/
@@ -184,7 +181,8 @@ body {
 }
 /*==============Content===========================================*/
 /*==============My anvantages=====================================*/
-.container-anvantages {
+.background-anvantages {
+  padding-top: 94px;
   padding-bottom: 47px;
 }
 .anvantages-heading {
@@ -216,14 +214,14 @@ body {
 }
 /*==============End my anvantages=================================*/
 /*==============My work===========================================*/
-.hi-work {
-  margin-bottom: 50px;
-}
 .work-list-container {
   padding-top: 47px;
   padding-bottom: 94px;
   margin-left: auto;
   margin-right: auto;
+}
+.hi-work {
+  margin-bottom: 50px;
 }
 .work-list {
   display: flex;
@@ -241,6 +239,11 @@ body {
 /*==============My command========================================*/
 .my-command {
   background-color: var(--bt-menu-background);
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.h-command {
+  margin-bottom: 50px;
 }
 .third-heading {
   font-weight: 500;
@@ -249,7 +252,7 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-color);
-  padding-top: 30px;
+  margin-bottom: 10px;
 }
 .content-command {
   font-size: 16px;
@@ -257,18 +260,18 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--color-content);
-  padding-top: 10px;
+}
+.text-comand {
+  padding-top: 30px;
   padding-bottom: 30px;
 }
 .command-list {
   display: flex;
-  padding-top: 50px;
   margin-top: -50px;
   margin-left: -30px;
 }
 .item-command {
   margin-top: 50px;
-  margin-bottom: 30px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -281,8 +284,6 @@ body {
 /*==============Footer============================================*/
 .footer {
   background-color: var(--background-color-hero);
-}
-.div-footer {
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -298,8 +299,8 @@ body {
   margin-top: 20px;
   font-style: normal;
 }
-.address-item {
-  padding-bottom: 9px;
+.address-item:not(:last-child) {
+  margin-bottom: 9px;
 }
 .address-link {
   font-style: normal;
@@ -337,17 +338,17 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+.portfolio {
+  background-color: var(--light-color-content);
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 /*==============End Components===================================*/
 /*==================Header=======================================*/
 /*==============End Header========================================*/
 /*==============Menu==============================================*/
-.portfolio {
-  background-color: var(--light-color-content);
-}
 .bt-container {
-  display: flex;
-  justify-content: center;
-  padding-bottom: 34px;
+  padding-bottom: 50px;
 }
 .list-menu {
   display: flex;
@@ -387,8 +388,7 @@ body {
   margin-top: -30px;
 }
 .item-content {
-  border: 1px solid #eeeeee;
-  box-sizing: border-box;
+  display: block;
 }
 .item-content:not(:nth-child(3n)) {
   margin-right: 30px;
@@ -399,22 +399,16 @@ body {
 .third-h {
   font-weight: 700;
   font-size: 18px;
-  line-height: 2px;
+  line-height: 2;
   letter-spacing: 0.06em;
   color: var(--title-color);
-}
-.third-h {
-  margin-top: 20px;
-  margin-bottom: 4px;
-  padding-left: 24px;
   padding-top: 10px;
-  padding-bottom: 10px;
 }
-.content-text {
-  margin-bottom: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 24px;
+.texts-item {
+  padding: 20px 24px;
+  border-right: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
 }
 /*==============End Content=======================================*/
 /*==============Footer============================================*/
