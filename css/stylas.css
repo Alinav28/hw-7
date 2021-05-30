@@ -92,6 +92,7 @@ body {
   line-height: 1.19;
   color: var(--color-logo-heder);
   margin-right: 93px;
+  animation-duration: 250ms;
 }
 .logotype-firsst-part {
   color: var(--accent-color);
@@ -109,11 +110,26 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--title-color);
+  transition: color 250ms linear;
 }
 .navigation-link:hover,
 .navigation-link:focus {
   color: var(--accent-color);
 }
+.activ {
+  color: var(--accent-color);
+}
+.activ::after {
+  display: flex;
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  flex-shrink: 0;
+  position: relative;
+  top: 32px;
+}
+
 .header-contacts-item:not(:last-child) {
   margin-right: 50px;
 }
@@ -148,9 +164,6 @@ body {
 }
 .header-contacts-link:hover,
 .header-contacts-link:focus {
-  color: var(--accent-color);
-}
-.activ {
   color: var(--accent-color);
 }
 /*==============End Header=======================================*/
@@ -200,6 +213,7 @@ body {
   border-style: none;
   padding: 10px 32px;
   display: block;
+  transition: background-color 250ms linear, color 250ms linear;
 }
 .modal-button:hover,
 .modal-button:focus {
@@ -275,8 +289,23 @@ body {
   margin-top: -30px;
 }
 .item-work {
+  display: block;
   margin-left: 30px;
   margin-top: 30px;
+}
+.img-nama {
+  background-color: rgba(47, 48, 58, 0.8);
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  position: relative;
+  margin-top: -70px;
 }
 /*==============End my work=======================================*/
 /*==============My command========================================*/
@@ -339,6 +368,7 @@ body {
   width: 20px;
   height: 20px;
   fill: var(--social-svg-color);
+  transition: fill 250ms linear;
 }
 .social-item:not(:last-child) {
   margin-right: 10px;
@@ -350,6 +380,7 @@ body {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+  transition: background-color 250ms linear;
 }
 /*==============End my command====================================*/
 /*==============Clients===========================================*/
@@ -359,6 +390,7 @@ body {
 }
 .clients-list {
   display: flex;
+  transform: fill 250ms linear;
 }
 .link-clients-svg {
   border: 1px solid #afb1b8;
@@ -369,6 +401,7 @@ body {
   justify-content: center;
   align-items: center;
   fill: var(--clients-svg-color);
+  transition: border 250ms linear;
 }
 .link-clients-svg:hover,
 .link-clients-svg:focus {
@@ -468,6 +501,7 @@ body {
   height: 44px;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+  transition: background-color 250ms linear;
 }
 .social-svg-footer {
   width: 20px;
@@ -479,7 +513,8 @@ body {
   background-color: var(--accent-color);
 }
 /*==============End Footer========================================*/
-/*-----------------Портфолио----------------------------*/
+
+/*-----------------Портфолио-----------------------------------------*/
 /*==============Components=======================================*/
 .second-heading {
   font-weight: 700;
@@ -507,8 +542,6 @@ body {
   padding-bottom: 94px;
 }
 /*==============End Components===================================*/
-/*==================Header=======================================*/
-/*==============End Header========================================*/
 /*==============Menu==============================================*/
 .bt-container {
   padding-bottom: 50px;
@@ -535,6 +568,7 @@ body {
   color: var(--title-color);
   padding: 6px 22px;
   border: none;
+  transition: background-color 250ms linear, color 250ms linear;
 }
 .bt-menu:hover,
 .bt-menu:focus {
@@ -567,12 +601,89 @@ body {
   color: var(--title-color);
   padding-top: 10px;
 }
+.content-text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+  color: var(--color-content);
+}
 .texts-item {
   padding: 20px 24px;
   border-right: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
 }
+.overly-hover {
+  position: relative;
+  overflow: hidden;
+}
+
+.overly-hover-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+  color: var(--light-color-content);
+  padding: 63px 24px;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 150, 243, 0.9);
+  overflow: auto;
+  transform: translatey(100%);
+  transition: transform 250ms linear;
+}
+.overly-hover-linc:hover .overly-hover-text,
+.overly-hover-linc:focus .overly-hover-text {
+  transform: translatey(0%);
+}
 /*==============End Content=======================================*/
-/*==============Footer============================================*/
-/*==============End Footer========================================*/
+/*=================Form===========================================*/
+.bakdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
+.bakdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.modal {
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  transform: translate(-50% -50%);
+  width: 528px;
+  height: 581px;
+  background-color: var(--light-color-content);
+  transform: opacity 250ms linear, visibility 250ms linear;
+}
+
+.close-bt {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0;
+}
+.close-bt-svg {
+  width: 18px;
+  height: 18px;
+  align-content: center;
+  padding: 0;
+}
+/*===============And Form=========================================*/

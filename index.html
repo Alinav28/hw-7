@@ -6,7 +6,7 @@
     <title lang="en">WebStudio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css">
     <link rel="stylesheet" href="./css/stylas.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
         rel="stylesheet">
@@ -16,10 +16,10 @@
     <header class="header">
         <div class=" header-contacts">
             <nav class="navigation-header">
-                <a class="logotype link" href="index.html" lang="en"> <span class="logotype-firsst-part">Web</span>Studio</a>
+                <a class="logotype link animate__pulse animate__animated" href="index.html" lang="en"> <span class="logotype-firsst-part">Web</span>Studio</a>
                 <ul class="navigation-list list">
                     <li class="navigation-item">
-                        <a class="navigation-link activ link" href="index.html">Студия</a>
+                        <a class="navigation-link activ  link" href="index.html">Студия</a>
                     </li>
                     <li class="navigation-item">
                         <a class="navigation-link link" href="portfolio.html">Портфолио</a>
@@ -56,7 +56,7 @@
     <section class="hero">
         <div class="container">
             <h1 class="hero-item">Эффективные решения для вашего бизнеса</h1>
-            <button class="modal-button" type="button" >Заказать услугу</button>
+            <button class="modal-button " data-modal-open type="button" >Заказать услугу</button>
         </div>
     </section>
     <!--Content-->
@@ -111,12 +111,21 @@
             <ul class="work-list list">
                 <li class="item-work">
                     <img class="work-img-first" src="./images/image1.jpg" alt="Фото рабочего места" width="370" height="294">
+                    <div class="img-nama"> 
+                        <h3>Десктопные приложения</h3>
+                    </div>
                 </li>
                 <li class="item-work">
                     <img class="work-img-second" src="./images/image2.jpg" alt="Фото рабочего места со смартфона" width="370" height="294">
+                    <div class="img-nama">
+                        <h3>Мобильные приложения</h3>
+                    </div>
                 </li>
                 <li class="item-work">
                     <img class="work-img-third" src="./images/image3.jpg" alt="Фото рабочего места с планшета" width="370" height="294">
+                    <div class="img-nama">
+                        <h3>Дизайнерские решения</h3>
+                    </div>
                 </li>
             </ul>
         </div>
@@ -328,7 +337,7 @@
         </div>
     </section>
 </main>
-    <!--"Footer-->
+    <!--Footer-->
     <footer class="footer">
         <div class="container div-footer">
             <div class="footer-logotype-section">        
@@ -378,9 +387,20 @@
                             </svg>
                         </a>
                     </li>
-                    </ul>
+                </ul>
             </div>
         </div>
-    </footer>        
+    </footer>
+    <!--Form-->
+    <div class="bakdrop is-hidden" data-modal>
+        <div class="modal">
+            <button data-modal-close class="close-bt" type="button">
+                <svg class="close-bt-svg">
+                    <use href="./images/sprite.svg#icon-close-black"></use>
+                </svg>
+            </button>        
+        </div>
+    </div> 
+    <script src="./js/modal.js"></script>
 </body>
 </html>
