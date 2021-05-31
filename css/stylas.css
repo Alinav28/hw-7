@@ -129,7 +129,9 @@ body {
   position: relative;
   top: 32px;
 }
-
+.header-contacts-link {
+  transition: color 250ms linear;
+}
 .header-contacts-item:not(:last-child) {
   margin-right: 50px;
 }
@@ -197,6 +199,7 @@ body {
 .modal-button {
   margin-top: 30px;
   justify-content: center;
+  cursor: pointer;
 }
 .modal-button {
   font-family: var(--first-foyn);
@@ -569,11 +572,15 @@ body {
   padding: 6px 22px;
   border: none;
   transition: background-color 250ms linear, color 250ms linear;
+  cursor: pointer;
 }
 .bt-menu:hover,
 .bt-menu:focus {
   color: var(--light-color-content);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
 }
 /*==============End Menu==========================================*/
 /*==============Content===========================================*/
@@ -586,9 +593,13 @@ body {
 .item-content {
   margin-left: 30px;
   margin-top: 30px;
+  cursor: pointer;
 }
-.item-content:hover,
-.item-content:focus {
+.overly-hover-linc {
+  display: block;
+}
+.overly-hover-linc:hover,
+.overly-hover-linc:focus {
   box-sizing: border-box;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -651,23 +662,25 @@ body {
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 100;
+  transition: opacity 250ms linear, visibility 250ms linear;
 }
-.bakdrop.is-hidden {
+.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
 }
 .modal {
   position: absolute;
-  top: 20%;
-  left: 30%;
-  transform: translate(-50% -50%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 528px;
-  height: 581px;
+  height: 580px;
   background-color: var(--light-color-content);
-  transform: opacity 250ms linear, visibility 250ms linear;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 }
-
 .close-bt {
   position: absolute;
   top: 8px;
