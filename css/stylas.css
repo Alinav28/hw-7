@@ -404,7 +404,7 @@ body {
   justify-content: center;
   align-items: center;
   fill: var(--clients-svg-color);
-  transition: border 250ms linear;
+  transition: fill 250ms linear, border 250ms linear;
 }
 .link-clients-svg:hover,
 .link-clients-svg:focus {
@@ -553,6 +553,7 @@ body {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
+  transition: box-shadow 250ms linear;
 }
 .item-menu:not(:last-child) {
   margin-right: 8px;
@@ -597,6 +598,7 @@ body {
 }
 .overly-hover-linc {
   display: block;
+  transition: box-shadow 250ms linear;
 }
 .overly-hover-linc:hover,
 .overly-hover-linc:focus {
