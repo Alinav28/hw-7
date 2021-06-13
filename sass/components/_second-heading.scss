@@ -1,0 +1,5 @@
+.second-heading {
+  @include font(36px, 700, 1.16, 0.03em);
+  text-align: center;
+  color: var(--title-color);
+}

@@ -1,0 +1,4 @@
+.content {
+  @include font(14px, 400, 1.71, 00.03em);
+  color: var(--color-content);
+}
