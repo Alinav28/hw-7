@@ -1,40 +1,47 @@
 .header {
   border-bottom: 1px solid #ececec;
-  padding-top: 24px;
-  padding-bottom: 25px;
+
+  .header__contacts {
+    display: flex;
+    align-items: center;
+    @include wid(1200px);
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 24px;
+    padding-bottom: 25px;
+    margin: 0 auto;
+  }
+
+  .header__nav {
+    display: flex;
+    align-items: center;
+  }
 }
-.header-contacts {
-  display: flex;
-  align-items: center;
-  @include wid(1200px);
-  padding-left: 15px;
-  padding-right: 15px;
-  margin: 0 auto;
-}
-.header__nav {
-  display: flex;
-  align-items: center;
-}
-.logotype {
+.logo {
   font-family: var(--second-foyn);
   @include font(26px, 700, 1.19, 0.03em);
   color: var(--color-logo-heder);
-  margin-right: 93px;
-  animation-duration: 250ms;
+
+  .heder__logo {
+    margin-right: 93px;
+    animation-duration: 250ms;
+  }
+
+  .logo__span {
+    color: var(--accent-color);
+  }
 }
-.logotype-firsst-part {
-  color: var(--accent-color);
-}
-.navigation-list {
+
+.nav__list {
   display: flex;
   align-items: center;
 }
-.navigation-item {
+.nav__list__item {
   &:not(:last-child) {
     margin-right: 50px;
   }
 }
-.navigation-link {
+.nav__list__link {
   @include font(14px, 500, 1.14, 0.02em);
   letter-spacing: 0.02em;
   color: var(--title-color);
